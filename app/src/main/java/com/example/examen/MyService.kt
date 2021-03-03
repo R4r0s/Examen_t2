@@ -56,6 +56,11 @@ class MyService : Service() {
     }
 
     fun sendNotification(num1: Int, num2: Int, op: String, result: Int) {
+        val notificationIntent = Intent(applicationContext, MostrarResultado::class.java)
+        notificationIntent.putExtra("num1", num1.toString())
+        notificationIntent.putExtra("num2", num2.toString())
+        notificationIntent.putExtra("op", op.toString())
+        notificationIntent.putExtra("result", result.toString())
         val notificationId = 101
 
         val pendingIntent = PendingIntent.getActivity(this, 0, Intent(this, MostrarResultado::class.java), PendingIntent.FLAG_UPDATE_CURRENT)

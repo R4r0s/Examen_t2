@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         buttonDiv = findViewById(R.id.buttonDiv)
 
        buttonSuma.setOnClickListener {
-           if (numero1 == null && numero2== null){
+           if (numero1.isNullOrBlank() && numero2.isNullOrBlank()){
                Toast.makeText(applicationContext, "Rellene los campos", Toast.LENGTH_SHORT).show()
            }else {
                numero1 = editTextNumero1.text.toString()
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         buttonResta.setOnClickListener {
-            if (numero1 == null && numero2== null){
+            if (numero1.isNullOrBlank() && numero2.isNullOrBlank()){
                 Toast.makeText(applicationContext, "Rellene los campos", Toast.LENGTH_SHORT).show()
             }else {
                 numero1 = editTextNumero1.text.toString()
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonMulti.setOnClickListener {
-            if (numero1 == null && numero2== null){
+            if (numero1.isNullOrBlank() && numero2.isNullOrBlank()){
                 Toast.makeText(applicationContext, "Rellene los campos", Toast.LENGTH_SHORT).show()
             }else {
                 numero1 = editTextNumero1.text.toString()
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonDiv.setOnClickListener {
-            if (numero1 == null && numero2== null){
+            if (numero1.isNullOrBlank() && numero2.isNullOrBlank()){
                 Toast.makeText(applicationContext, "Rellene los campos", Toast.LENGTH_SHORT).show()
             }else {
                 numero1 = editTextNumero1.text.toString()
